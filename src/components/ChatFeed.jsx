@@ -10,6 +10,22 @@ const ChatFeed = (props) => {
   const chat = chats && chats[activeChat];
   //   console.log(chat, userName, messages);
 
+  const renderReadReceipts = (message, isMyMessage) =>
+    chat.people.map(
+      (person, index) =>
+        person.last_read === message.id && (
+          <div
+            key={`read_${index}`}
+            className='read-receipt'
+            style={{
+              float: isMyMessage ? 'right' : 'left',
+              backgroundImage:
+                person.person.avatar && `url(${person.person.avatar})`,
+            }}
+          />
+        )
+    );
+
   //Component for Generate messages
   const renderMessages = () => {
     //fetch all of messages
@@ -38,7 +54,7 @@ const ChatFeed = (props) => {
               marginLeft: isMyMessage ? '0px' : '68px',
             }}
           >
-            read-receipts
+            {renderReadReceipts(message, isMyMessage)}
           </div>
         </div>
       );
