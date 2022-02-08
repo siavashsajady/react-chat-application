@@ -208,3 +208,27 @@
   position: relative;
   transition: 0.4s;
 }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.error {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1.1em;
+}
