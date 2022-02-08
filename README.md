@@ -2,7 +2,7 @@
 
 ### [Example Website](https://react-chat-app-pro.netlify.app)
 
-### ![Teams Build with Chat Engine](https://ibb.co/d5x5r5g)
+![Teams Build with Chat Engine](https://ibb.co/d5x5r5g)
 
 ## Introduction
 
